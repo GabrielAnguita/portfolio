@@ -15,7 +15,7 @@ class Stock:
         """
         Mock method for obtaining the price of a stock on a given date.
         We seed the random module with both the date and the stock's ticker for
-        the sake of getting consistent results on tests.
+        the sake of getting consistent results across a single test run.
 
         Here, we would query a database or an external API for getting actual results,
         but it goes beyond the scope of the requirements.
