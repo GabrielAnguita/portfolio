@@ -11,7 +11,7 @@ This project implements a simple Portfolio class that calculates the profit of a
 
 1. Clone the repository:
    ```
-   git clone <repository-url>
+   git clone git@github.com:GabrielAnguita/portfolio.git
    cd portfolio-profit
    ```
 
@@ -23,8 +23,8 @@ This project implements a simple Portfolio class that calculates the profit of a
 ## Project Structure
 
 - `portfolio.py`: Contains the main implementation of the Portfolio class and related classes.
-- `__init__.py`: Empty file to mark the directory as a Python package.
 - `pyproject.toml`: Poetry configuration file with project metadata and dependencies.
+- `tests.py`: A few tests.
 
 ## Usage
 
