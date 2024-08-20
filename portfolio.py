@@ -33,6 +33,7 @@ class StockHolding:
     amount: int # could have been float or decimal, if we'd considered fractional shares
 
     def get_value_on_date(self, date: date) -> float:
+        """Date in, stock value at said date out"""
         return self.stock.get_price(date) * self.amount
 
 
@@ -89,7 +90,11 @@ class Portfolio:
             data: dict[Ticker, int] | None = None,
             **kwargs
         ) -> 'Portfolio':
-
+        """
+        Return an instance of Portfolio (or any subclass), built from a dict whose
+        keys are Stock tickers and its values are ints representing the amount holded.
+        Can also take kwargs with the same logic.
+        """
         if data is None:
             data = kwargs
         else:
@@ -106,31 +111,3 @@ class Portfolio:
                 for ticker, amount in data.items()
             }
         )
-
-
-def run_examples() -> None:
-    portfolio = Portfolio.from_dict(
-        GOOG=5,
-        POOG=1,
-        CHUG=10,
-    )
-    for start_date, end_date in (
-        (date(2020, 12, 1), date(2021, 12, 1)),
-        (date(2020, 12, 1), date(2022, 12, 1)),
-    ):
-        profit = portfolio.get_profit(start_date, end_date)
-        annualized_profit = portfolio.get_profit(start_date, end_date, annualized=True)
-        print(
-            "The portfolio's profit between {} and {} is {}.".format(
-                start_date, end_date, profit
-            )
-        )
-        print(
-            "The portfolio's annualized profit between {} and {} is {}.".format(
-                start_date, end_date, annualized_profit
-            )
-        )
-
-
-if __name__ == "__main__":
-    run_examples()    

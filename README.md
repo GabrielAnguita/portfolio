@@ -25,23 +25,24 @@ This project implements a simple Portfolio class that calculates the profit of a
 - `portfolio.py`: Contains the main implementation of the Portfolio class and related classes.
 - `pyproject.toml`: Poetry configuration file with project metadata and dependencies.
 - `tests.py`: A few tests.
+- `examples.py`: Examples.
 
 ## Usage
 
 To run the example calculations:
 
 ```
-poetry run python portfolio.py
+poetry run python examples.py
 ```
 
-This will execute the `run_examples()` function in `portfolio.py`, which demonstrates the usage of the Portfolio class with sample data.
+This will execute the `run_examples()` function in `examples.py`, which demonstrates the usage of the Portfolio class with sample data.
 
 ## Testing
 
 To run tests:
 
 ```
-poetry run pytest
+poetry run pytest tests.py
 ```
 
 ## Implementation Details
