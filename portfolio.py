@@ -76,7 +76,7 @@ class Portfolio:
         profit: float,
     ) -> float:
         """
-        Here I commended myself to the spirits of the internet:
+        Reference:
         https://www.investopedia.com/terms/a/annual-return.asp
         """
         days = (end_date - start_date).days
@@ -92,7 +92,7 @@ class Portfolio:
         ) -> 'Portfolio':
         """
         Return an instance of Portfolio (or any subclass), built from a dict whose
-        keys are Stock tickers and its values are ints representing the amount holded.
+        keys are Stock tickers and its values are ints representing the amount held.
         Can also take kwargs with the same logic.
         """
         if data is None:
